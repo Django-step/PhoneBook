@@ -1,0 +1,33 @@
+{% extends 'layouts/base.html' %}
+{% block title %}
+	{{ title }}
+{% endblock title %}
+
+{% block content %}
+	{% load static %}
+	<header id="head" class="secondary"></header>
+
+	<!-- container -->
+	<div class="container">
+		<div class="row">
+			<!-- Article main content -->
+			<article class="col-xs-12 maincontent">
+				<header class="page-header">
+					<h1 class="page-title">{{ title }}</h1>
+				</header>
+			</article>
+			<div class="report_img">
+				<h3 style="color: {{ color }}">
+					{{ report }}
+				</h3>
+				<br>
+                <img src="../../static/images/sit-mask-3.png" width="50%" height="50%" alt="report_img">
+            </div>
+		</div>
+	</div>
+	<style>
+		.report_img {
+			 text-align: center;
+		}
+	</style>
+{% endblock content %}

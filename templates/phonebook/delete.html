@@ -1,0 +1,16 @@
+{% extends 'layouts/base.html' %}
+{% block content %}
+{% load static %}
+<div class="card">
+    <div class="card-body">
+        <h3 class="card-title">Удалить?</h3>
+        <p class="card-text">
+            <form action="" method="post">
+                {% csrf_token %}
+                <button type="submit" class="btn btn-danger">Удалить</button>
+            </form>
+        </p>
+    </div>
+</div>
+{% endblock content %}
+

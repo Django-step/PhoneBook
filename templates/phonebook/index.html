@@ -1,0 +1,45 @@
+{% extends 'layouts/base.html' %}
+{% block content %}
+{% load static %}
+<div class="main-box cotaner text-center mt-6">
+    <br>
+    <h2>Телефонная книга</h2>
+    {% if user.username == 'admin' %}
+        <a class="btn btn-sm btn-success" href="/phonebook/add">Добавить контакт</a>
+        <br><br>
+    {% endif %}
+</div>
+<div class="card my">
+    <div class="card-body">
+        <h5 class="card-title">Контакти</h5>
+        <h6 class="card-subtitle mb-2 text-muted"></h6>
+        <p class="card-text">
+            <table class="table my_table">
+                <thead>
+                    <tr>
+                        <th scope="col">#</th>
+                        <th scope="col">Имя</th>
+                        <th scope="col">Телефон</th>
+                        <th scope="col">Действия</th>
+                    </tr>
+                </thead>
+                <tbody>
+                        <tr>
+                            <th scope="row">1.</th>
+                            <td>Boris</td>
+                            <td>+380998741212</td>
+                            <td><a class="btn btn-sm btn-danger" href="#">Delete</a></td>
+                        </tr>
+                </tbody>
+            </table>
+        </p>
+    </div>
+</div>
+<style>
+    .my_table{
+        width: 70%;
+        margin: auto;
+    }
+</style>
+
+{% endblock content %}
